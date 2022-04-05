@@ -1,0 +1,39 @@
+{
+  "name": "museum-integration",
+  "version": "1.0",
+  "private": true,
+  "description": "Museum Integration App",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "pm2 start app.js"
+  },
+  "keywords": [
+    "Museum Integration App"
+  ],
+  "author": "Omar",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "body-parser": "^1.19.2",
+    "chokidar": "^3.5.3",
+    "express": "^4.17.3",
+    "express-rate-limit": "^6.3.0",
+    "express-slow-down": "^1.4.0",
+    "lodash": "^4.17.21",
+    "nodemon": "^2.0.15",
+    "nunjucks": "^3.2.3",
+    "pm2": "^5.2.0",
+    "simple-node-logger": "^21.8.12"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "jest": "^27.5.1",
+    "stylelint": "^14.6.1",
+    "stylelint-config-standard": "^25.0.0"
+  }
+}

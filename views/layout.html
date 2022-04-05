@@ -1,0 +1,22 @@
+{% import 'header.html' as header %}
+{% import 'search.html' as search %}
+{% import 'modal-index.html' as modalIndex %}
+{% import 'search-results.html' as searchResults %}
+{% import 'footer.html' as footer %}
+
+{% block header %}
+  {{ header.render() }}
+  {% include 'header-container.html' %}
+{% endblock %}
+
+{% block body %}
+  {% include 'body-tag-start.html' %}
+    {{ modalIndex.render(artwork) }}
+    {{ search.render() }}
+    {{ searchResults.render(firstSearchResult) }}
+  {% include 'body-tag-end.html' %}
+{% endblock %}
+
+{% block footer %}
+  {{ footer.render() }}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% macro render() %}
+  <div class="search">
+    <br><hr>
+    <p class="search-header">Search for artwork by Department</p>
+    <form method="POST" action="/search" onsubmit="return validateSearchForm();" />
+      <p class="required-content"><span>*&nbsp;</span>Required Fields</p>
+      <table>
+        <tr>
+          <td><span>*&nbsp;</span><b>Department ID</b>&nbsp;</td>
+          <td><input class="search-field" type="text" name="departmentId" id="departmentId" placeholder="Enter Department ID" size="30"  /></td>
+        </tr>
+
+        <tr>
+          <td><span>*&nbsp;</span><b>Search Keyword</b>&nbsp;</td>
+          <td><input class="search-field" type="text" name="searchTerm" id="searchTerm" placeholder="Enter artwork search keyword" size="30"  /></td>
+        </tr>
+      </table>
+
+      <button class="search-field search-field-btn" type="submit" id="#searchArtworkBtn">Search Artwork</button>
+    </form>
+  </div>
+{% endmacro %}

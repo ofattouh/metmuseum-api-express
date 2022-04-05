@@ -1,0 +1,26 @@
+
+{% macro render(firstSearchResult) %}
+<div class="search-results-content">
+
+  {% if firstSearchResult.searchedDepartment and firstSearchResult.searchedTerm %}
+    {% if firstSearchResult.title or firstSearchResult.objectName %}
+      <p>Search results for keyword: <b>{{ firstSearchResult.searchedTerm }}</b>
+        at Department: <b>{{ firstSearchResult.searchedDepartment}}</b></p>
+
+      <p>
+        <b>Artwork Title:</b> {{ firstSearchResult.title }}<br>
+        <b>Artwork Name:</b> {{ firstSearchResult.objectName }}<br>
+        <b>Artist Name:</b> {{ firstSearchResult.artistDisplayName }}<br>
+        <b>Artist Bio:</b> {{ firstSearchResult.artistDisplayBio }}<br>
+        <b>Object ID:</b> {{ firstSearchResult.objectID }}<br>
+        <b>Repository:</b> {{ firstSearchResult.repository }}
+      </p><br>
+
+      <img src="{{ firstSearchResult.primaryImage }}" alt="No artwork image was found!" width="800" />
+    {% else %}
+      <br><p>No search results was found for keyword: <b>{{ firstSearchResult.searchedTerm }}</b>
+        at Department: <b>{{ firstSearchResult.searchedDepartment}}</b></p>
+    {% endif %}
+  {% endif %}          
+</div>
+{% endmacro %}

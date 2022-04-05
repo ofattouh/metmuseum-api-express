@@ -1,0 +1,43 @@
+
+{% macro render(artwork) %}
+<div class="container">
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">
+    Display Artwork</button><br>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        {# clear the timer #}
+        {{ resetTimer(artwork.intervalId) }}
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">Metropolitan Museum's API Artwork Collection</h4>
+        </div>
+
+        <div class="modal-body">
+          <p>
+            <p>
+              <b>Artwork Title:</b> {{ artwork.title }}<br>
+              <b>Artwork Name:</b> {{ artwork.objectName }}<br>
+              <b>Artist Name:</b> {{ artwork.artistDisplayName }}<br>
+              <b>Artist Bio:</b> {{ artwork.artistDisplayBio }}<br>
+              <b>Object ID:</b> {{ artwork.objectID }}<br>
+              <b>Repository:</b> {{ artwork.repository }}
+            </p><br>
+
+            <img src="{{ artwork.primaryImage }}" alt="No artwork image was found!" width="800" />
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endmacro %}
+
+{% macro resetTimer(id) %}
+  {% set id = null %}
+{% endmacro %}

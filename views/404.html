@@ -1,0 +1,16 @@
+{% import 'header.html' as header %}
+{% import 'footer.html' as footer %}
+
+{% block header %}
+  {{ header.render() }}
+{% endblock %}
+
+{% block body %}
+  {% include 'body-tag-start.html' %}
+     <p>{{ msg }}</p>
+  {% include 'body-tag-end.html' %}
+{% endblock %}
+
+{% block footer %}
+  {{ footer.render() }}
+{% endblock %}

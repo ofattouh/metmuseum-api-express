@@ -1,0 +1,103 @@
+/*
+  Style sheet for the artwork collection app
+*/
+
+/* Screen size 24 inches, resolution: 1920 × 1200
+https://gist.github.com/Mikodes/be9b9ce42e46c3d4ccb6 */
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1920px) {
+  body {
+    background-color: #f7f7f7;
+    text-align: center;
+    line-height: 2em;
+    font-size: 16px;
+    font-family: Helvetica, Arial, Verdana, Tahoma, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+
+  .my-header {
+    padding: 30px;
+    background: #000;
+    text-align: center;
+    color: #fff;
+  }
+
+  .header-anchor,
+  .footer-anchor {
+    color: #fff;
+  }
+
+  .header-anchor :hover,
+  footer-anchor:hover {
+    color: #31b0d5;
+    text-decoration: underline;
+  }
+
+  h2,
+  .modal-title,
+  .search-header,
+  search-results-header {
+    text-transform: uppercase;
+  }
+
+  .modal-body {
+    text-align: center;
+  }
+
+  .container-header {
+    margin-top: 5%;
+  }
+
+  .search-header {
+    margin-top: 20px;
+  }
+
+  .search-results-content {
+    margin-bottom: 10%;
+  }
+
+  .search-field {
+    margin-bottom: 10px;
+  }
+
+  .search-field-btn {
+    padding: 10px 15px;
+    color: #fff;
+    background-color: #31b0d5;
+    border-color: #269abc;
+    line-height: 1.5;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  span {
+    color: #f00;
+  }
+
+  .required-content {
+    font-size: 14px;
+  }
+
+  table {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  hr {
+    border: none;
+    height: 1px;
+    color: #333; /* old IE */
+    background-color: #333; /* Modern Browsers */
+    width: 90%;
+  }
+
+  .my-footer {
+    padding: 5px;
+    text-align: center;
+    font-size: 14px;
+    background-color: #000;
+    color: #fff;
+  }
+}
